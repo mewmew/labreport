@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper,british]{article}
+
+% located in `~/texmf/tex/latex/labreport`
+\usepackage{labreport}
+
+% Draft notice.
+% TODO: remove draft notice.
+%\usepackage[firstpage]{draftwatermark}
+
+% ##############################################################################
+% ### [ Update this info ] #####################################################
+% ##############################################################################
+
+\makeatletter
+
+\renewcommand{\@author}{Jane Rue}
+\newcommand{\@labpartner}{}
+\newcommand{\@labsupervisor}{John Doe}
+\newcommand{\@shorttitle}{Lab 1}
+\renewcommand{\@title}{\@shorttitle~-~Experimental foo}
+\newcommand{\@coursename}{Chemistry Foo}
+\newcommand{\@coursenumber}{XY2020}
+\newcommand{\@coursepart}{Bar}
+\newcommand{\@labgroup}{Group-xx}
+\newcommand{\@labdate}{2020-10-27}
+
+% ##############################################################################
+% ### [/ Update this info ] ####################################################
+% ##############################################################################
+
+\begin{document}
+
+% === [ Front matter ] =========================================================
+
+\pagenumbering{roman}
+
+% --- [ Title page ] -----------------------------------------------------------
+
+\maketitle
+
+\clearpage
+
+% --- [ Table of contents ] ----------------------------------------------------
+
+\tableofcontents
+
+\clearpage
+
+% === [ Main matter ] ==========================================================
+
+\pagenumbering{arabic}
+
+\include{sections/1_introduction}
+\include{sections/2_method}
+\include{sections/3_results}
+\include{sections/4_discussion}
+
+% === [ Back matter ] ==========================================================
+
+% --- [ References ] -----------------------------------------------------------
+
+\bibliography{references}
+
+% --- [ Appendices ] -----------------------------------------------------------
+
+\include{sections/appendices}
+
+\end{document}
