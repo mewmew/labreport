@@ -1,0 +1,153 @@
+\ProvidesPackage{kemi_preamble}
+
+\usepackage[utf8]{inputenc}
+\usepackage[british]{babel}
+\usepackage[a4paper,lmargin=0.1666\paperwidth,rmargin=0.1666\paperwidth,tmargin=0.1111\paperheight,bmargin=0.1111\paperheight]{geometry}
+\usepackage[parfill]{parskip}
+
+% Include bibliography in the table of contents.
+%
+% Options:
+%    nottoc: don't include the table of contents in the table of contents.
+\usepackage[nottoc]{tocbibind}
+
+% Use IEEE-style references.
+\bibliographystyle{ieeetr}
+
+% Add support for links.
+%
+% Options:
+%    hidelinks: don't show red boxes around links.
+%
+% Examples:
+%    \url{http://example.org/}
+\usepackage[hidelinks]{hyperref}
+
+% Add \todo command to underline text in yellow.
+%
+% Examples:
+%    \todo{foo}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\newcommand{\todo}[1]{\adjustbox{bgcolor=yellow}{#1}}
+
+% Include images.
+\usepackage{graphicx}
+
+% Math extra.
+\usepackage{amsmath}
+
+% Clever references that adds "table", "figure", etc prefixes to references.
+%
+% Examples:
+%    \cref{tbl:foo}
+\usepackage{cleveref}
+
+% Fix clever ref name for source code listings.
+\crefname{lstlisting}{listing}{listings}
+\Crefname{lstlisting}{Listing}{Listings}
+
+% Custom headers and footers.
+\usepackage{fancyhdr}
+
+% --- [ header and footer ] ---
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{14pt}
+\fancyhead[L]{\@coursename}
+\fancyhead[C]{\@shorttitle}
+\fancyhead[R]{\@author}
+\fancyfoot[C]{\thepage}
+
+% --- [/ header and footer ] ---
+
+% Use modern rendering of fonts.
+\usepackage{lmodern}
+
+% Strike through cancelled terms diagonally.
+%
+% Example:
+%
+%    \cancel{2x}
+\usepackage{cancel}
+
+% Format SI units.
+%
+% Example:
+%    \si{kg.m.s^{-1}}
+%    \si{\degree}
+\usepackage[alsoload=synchem]{siunitx}
+
+% Chemistry formulas.
+%\usepackage{chemgreek}  % greek letters
+%\usepackage{chemfig}    % chemistry figures
+%\usepackage{chemmacros}
+\usepackage{chemformula}
+%\setchemformula{decimal-marker={,}}
+
+% unbalanced reaction, right arrow
+\NewChemArrow {-/->}
+{
+	\draw[chemarrow,-cf] (cf_arrow_start) -- (cf_arrow_end) ;
+	\draw[chemarrow] (cf_arrow_mid) ++ (.0ex,.4ex) -- ++(-.4ex,-.8ex) ;
+}
+
+% --- [ title page ] ---
+
+\date{\today}
+
+% based on template by Sara Berglund & Aitor Aldama Campino (v 1.0, September 2016)
+% based on template by Viktor Bengtsson (2018).
+
+% --- [/ title page ] ---
+
+% Absolute symbol
+%
+% Example:
+%    \abs{foo}
+\usepackage{physics}
+
+% Include source code listings.
+%
+% Example:
+%    \lstinputlisting[language=Matlab,label={lst:part_1_Ve},caption={Determine equivalence point through derivation.}]{files/lst:part_1_Ve.m}
+\usepackage{listings}
+\usepackage{lstlangs/c/style}
+
+% Add matching parenthesis.
+%
+% Example:
+%
+%    \paren{foobar}
+\newcommand{\paren}[1]{\left( #1 \right)}
+
+% Sub figures.
+%
+% Examples:
+%    \begin{figure}[htbp]
+%       \centering
+%       \begin{subfigure}[ht]{0.50\textwidth}
+%          foo
+%       \end{subfigure}
+%       \begin{subfigure}[ht]{0.50\textwidth}
+%          foo
+%       \end{subfigure}
+%       \caption{foo}
+%    \end{figure}
+\usepackage{subcaption}
+
+% Display table in landscape orientation.
+%
+% Example:
+%    \begin{landscape}
+%       \begin{table}[htbp]
+%       \end{table}
+%    \end{landscape}
+\usepackage{lscape}
+
+% Absolute symbol
+%
+% Example:
+%    \abs{foo}
+\usepackage{physics}
