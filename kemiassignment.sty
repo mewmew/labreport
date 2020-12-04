@@ -1,4 +1,4 @@
-\ProvidesPackage{labreport}
+\ProvidesPackage{kemiassignment}
 
 \usepackage{kemi_preamble}
 
@@ -30,14 +30,11 @@
 			\vskip 200\p@
 			\begin{flushleft}
 				\begin{tabular}{lr}
-					\ifthenelse{\isnamedefined{@coursename}   }{Course:         & \@coursename     \\}{}%
-					\ifthenelse{\isnamedefined{@coursepart}   }{Course part:    & \@coursepart     \\}{}%
-					\ifthenelse{\isnamedefined{@shorttitle}   }{Lab:            & \@shorttitle     \\}{}%
-					\ifthenelse{\isnamedefined{@author}       }{Author:         & \@author         \\}{}%
-					\ifthenelse{\isnamedefined{@labpartner}   }{Lab partner(s): & \@labpartner     \\}{}%
-					\ifthenelse{\isnamedefined{@labsupervisor}}{Lab supervisor: & \@labsupervisor  \\}{}%
-					\ifthenelse{\isnamedefined{@labgroup}     }{Lab group:      & \@labgroup       \\}{}%
-					\ifthenelse{\isnamedefined{@labdate}      }{Lab date:       & \@labdate}{}%
+					\ifthenelse{\isnamedefined{@coursename}    }{Course:           & \@coursename     \\}{}%
+					\ifthenelse{\isnamedefined{@coursepart}    }{Course part:      & \@coursepart     \\}{}%
+					\ifthenelse{\isnamedefined{@author}        }{Author:           & \@author         \\}{}%
+					\ifthenelse{\isnamedefined{@grouppartner}  }{Group partner(s): & \@grouppartner   \\}{}%
+					\ifthenelse{\isnamedefined{@assignmentdate}}{Date:             & \@assignmentdate}{}%
 				\end{tabular}
 			\end{flushleft}
 			\vfil

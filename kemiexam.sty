@@ -30,11 +30,11 @@
 			\vskip 200\p@
 			\begin{flushleft}
 				\begin{tabular}{lr}
-					Course:         & \@coursename     \\
-					Course part:    & \@coursepart     \\
-					Exam:           & \@title          \\
-					Author:         & \@author         \\
-					Exam date:      & \@examdate
+					\ifthenelse{\isnamedefined{@coursename}}{Course:         & \@coursename     \\}{}%
+					\ifthenelse{\isnamedefined{@coursepart}}{Course part:    & \@coursepart     \\}{}%
+					\ifthenelse{\isnamedefined{@title}     }{Exam:           & \@title          \\}{}%
+					\ifthenelse{\isnamedefined{@author}    }{Author:         & \@author         \\}{}%
+					\ifthenelse{\isnamedefined{@examdate}  }{Exam date:      & \@examdate}{}%
 				\end{tabular}
 			\end{flushleft}
 			\vfil
