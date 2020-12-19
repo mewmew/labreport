@@ -110,8 +110,26 @@
 
 % Include source code listings.
 %
+% Supported languages: https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Supported_languages
+%
 % Example:
-%    \lstinputlisting[language=Matlab,label={lst:part_1_Ve},caption={Determine equivalence point through derivation.}]{files/lst:part_1_Ve.m}
+%    \lstinputlisting[language=Matlab,label={lst:foo},caption={Example caption text.}]{files/foo.m}
+%
+% Extra languages (`lstlangs/{FOO}/lang`):
+%
+%    * diff
+%    * dot
+%    * go
+%    * llvm
+%    * matlab
+%    * nasm
+%    * reil
+%    * z3
+%
+% Example:
+%    \usepackage{lstlangs/dot/lang}
+%    \usepackage{lstlangs/dot/style}
+%    \lstinputlisting[language=dot, style=dot,label={lst:bar},caption={Example caption text.}]{files/bar.dot}
 \usepackage{listings}
 \usepackage{lstlangs/c/style}
 
