@@ -178,3 +178,8 @@
 % Example:
 %    \ifthenelse{\isempty{#1}}{#2}{#3}
 \usepackage{xifthen}
+
+% Use footnotes in table environment.
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
