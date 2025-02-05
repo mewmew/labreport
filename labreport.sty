@@ -17,25 +17,25 @@
 		\vtop{
 			\vskip 80\p@
 			\begin{flushleft}
-				\large{\@coursename ~(\@coursenumber )}
+				\large{\parbox[t]{12cm}{\@coursename ~\\(\@coursenumber )}}
 			\end{flushleft}
-			\vskip 10\p@
+			\vskip 20\p@
 			\begin{flushleft}
-				\huge \bfseries \@title \par
+				\huge \bfseries \parbox[t]{12cm}{\@title} \par
 			\end{flushleft}
 			\vskip 20\p@
 			\begin{flushleft}
 				\large \@date \par
 			\end{flushleft}
-			\vskip 200\p@
+			\vskip 180\p@
 			\begin{flushleft}
 				\begin{tabular}{ll}
-					\ifthenelse{\isnamedefined{@coursename}   }{Course:         & \@coursename     \\}{}%
+					\ifthenelse{\isnamedefined{@coursename}   }{Course:         & \parbox[t]{8cm}{\@coursename}     \\}{}%
 					\ifthenelse{\isnamedefined{@coursepart}   }{Course part:    & \@coursepart     \\}{}%
 					\ifthenelse{\isnamedefined{@shorttitle}   }{Lab:            & \@shorttitle     \\}{}%
 					\ifthenelse{\isnamedefined{@author}       }{Author:         & \@author         \\}{}%
-					\ifthenelse{\isnamedefined{@labpartner}   }{Lab partner(s): & \@labpartner     \\}{}%
-					\ifthenelse{\isnamedefined{@labsupervisor}}{Lab supervisor: & \@labsupervisor  \\}{}%
+					\ifthenelse{\isnamedefined{@labpartner}   }{Lab partner(s): & \parbox[t]{8cm}{\@labpartner}     \\}{}%
+					\ifthenelse{\isnamedefined{@labsupervisor}}{Lab supervisor: & \parbox[t]{8cm}{\@labsupervisor}  \\}{}%
 					\ifthenelse{\isnamedefined{@labgroup}     }{Lab group:      & \@labgroup       \\}{}%
 					\ifthenelse{\isnamedefined{@labdate}      }{Lab date:       & \@labdate}{}%
 				\end{tabular}

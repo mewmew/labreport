@@ -17,11 +17,11 @@
 		\vtop{
 			\vskip 80\p@
 			\begin{flushleft}
-				\large{\@coursename ~(\@coursenumber )}
+				\large{\parbox[t]{12cm}{\@coursename ~\\(\@coursenumber )}}
 			\end{flushleft}
 			\vskip 10\p@
 			\begin{flushleft}
-				\huge \bfseries \@title \par
+				\huge \bfseries \parbox[t]{12cm}{\@title} \par
 			\end{flushleft}
 			\vskip 20\p@
 			\begin{flushleft}
@@ -30,10 +30,11 @@
 			\vskip 200\p@
 			\begin{flushleft}
 				\begin{tabular}{ll}
-					\ifthenelse{\isnamedefined{@coursename}    }{Course:           & \@coursename     \\}{}%
+					\ifthenelse{\isnamedefined{@coursename}    }{Course:           & \parbox[t]{8cm}{\@coursename}     \\}{}%
 					\ifthenelse{\isnamedefined{@coursepart}    }{Course part:      & \@coursepart     \\}{}%
 					\ifthenelse{\isnamedefined{@author}        }{Author:           & \@author         \\}{}%
-					\ifthenelse{\isnamedefined{@grouppartner}  }{Group partner(s): & \@grouppartner   \\}{}%
+					\ifthenelse{\isnamedefined{@grouppartner}  }{Group partner(s): & \parbox[t]{8cm}{\@grouppartner}   \\}{}%
+					\ifthenelse{\isnamedefined{@groupid}       }{Group             & \@groupid   \\}{}%
 					\ifthenelse{\isnamedefined{@assignmentdate}}{Date:             & \@assignmentdate}{}%
 				\end{tabular}
 			\end{flushleft}

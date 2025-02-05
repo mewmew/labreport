@@ -17,11 +17,11 @@
 		\vtop{
 			\vskip 80\p@
 			\begin{flushleft}
-				\large{\@coursename ~(\@coursenumber )}
+				\large{\parbox[t]{12cm}{\@coursename ~\\(\@coursenumber )}}
 			\end{flushleft}
 			\vskip 10\p@
 			\begin{flushleft}
-				\huge \bfseries \@title \par
+				\huge \bfseries \parbox[t]{\@title} \par
 			\end{flushleft}
 			\vskip 20\p@
 			\begin{flushleft}
@@ -30,9 +30,9 @@
 			\vskip 200\p@
 			\begin{flushleft}
 				\begin{tabular}{ll}
-					\ifthenelse{\isnamedefined{@coursename}}{Course:         & \@coursename     \\}{}%
+					\ifthenelse{\isnamedefined{@coursename}}{Course:         & \parbox[t]{8cm}{\@coursename}     \\}{}%
 					\ifthenelse{\isnamedefined{@coursepart}}{Course part:    & \@coursepart     \\}{}%
-					\ifthenelse{\isnamedefined{@title}     }{Exam:           & \@title          \\}{}%
+					\ifthenelse{\isnamedefined{@title}     }{Exam:           & \parbox[t]{8cm}{\@title}          \\}{}%
 					\ifthenelse{\isnamedefined{@author}    }{Author:         & \@author         \\}{}%
 					\ifthenelse{\isnamedefined{@examdate}  }{Exam date:      & \@examdate}{}%
 				\end{tabular}
