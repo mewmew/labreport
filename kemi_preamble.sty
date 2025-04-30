@@ -217,3 +217,16 @@
 \newcommand{\xmark}{\ding{55}}
 \newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}\hspace{-2.5pt}}
 \newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+% More bullets point styles.
+%
+% Example:
+%    \begin{itemize}
+%       \item[\ding{51}] foo
+%       \item[\ding{56}] bar
+%       \item[\ding{43}] baz
+%       \item[\ding{118}] quz
+%    \end{itemize}
+%
+% For pifont "ding" code points, see https://latex-tutorial.com/wp-content/uploads/2021/12/Bullet-styles-pifonts-1024x790.webp
+\usepackage{pifont}
